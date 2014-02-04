@@ -25,16 +25,16 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------*/
-#include<string.h>
+#include <string.h>
 #include <sys/ioctl.h>
 #include <sys/prctl.h>
-#include<unistd.h>
+#include <unistd.h>
 #include <fcntl.h>
 #include "video_encoder_device.h"
 #include "omx_video_encoder.h"
 #include <linux/android_pmem.h>
 #ifdef USE_ION
-#include <ion_msm.h>
+#include <linux/ion.h>
 #endif
 
 #define MPEG4_SP_START 0
