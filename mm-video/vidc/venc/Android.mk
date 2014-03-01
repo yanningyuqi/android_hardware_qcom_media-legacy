@@ -56,7 +56,7 @@ libmm-venc-inc      += $(OMX_VIDEO_PATH)/vidc/common/inc
 libmm-venc-inc      += hardware/qcom/media-legacy/mm-core/inc
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 libmm-venc-inc      += hardware/qcom/media-legacy/libstagefrighthw
-libmm-venc-inc      += hardware/qcom/display-legacy/libgralloc
+libmm-venc-inc      += hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)/libgralloc
 libmm-venc-inc      += frameworks/native/include/media/hardware
 libmm-venc-inc      += frameworks/native/include/media/openmax
 
