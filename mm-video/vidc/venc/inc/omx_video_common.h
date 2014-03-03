@@ -32,10 +32,10 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //                             Include Files
 //////////////////////////////////////////////////////////////////////////////
 
-#include<stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #ifdef USE_ION
-#include <ion_msm.h>
+#include <linux/ion.h>
 #endif
 
 #define OMX_VIDEO_DEC_NUM_INPUT_BUFFERS   2
