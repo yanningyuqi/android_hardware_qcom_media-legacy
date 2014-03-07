@@ -9,14 +9,13 @@ LOCAL_PATH:= $(ROOT_DIR)
 # 				Common definitons
 # ---------------------------------------------------------------------------------
 
-libmm-venc-def := -g -O3 -Dlrintf=_ffix_r
 libmm-venc-def += -D__align=__alignx
 libmm-venc-def += -D__alignx\(x\)=__attribute__\(\(__aligned__\(x\)\)\)
 libmm-venc-def += -DT_ARM
 libmm-venc-def += -Dinline=__inline
 libmm-venc-def += -D_ANDROID_
 libmm-venc-def += -UENABLE_DEBUG_LOW
-#libmm-venc-def += -DENABLE_DEBUG_HIGH
+libmm-venc-def += -DENABLE_DEBUG_HIGH
 libmm-venc-def += -DENABLE_DEBUG_ERROR
 libmm-venc-def += -UINPUT_BUFFER_LOG
 libmm-venc-def += -UOUTPUT_BUFFER_LOG
@@ -41,6 +40,11 @@ libmm-venc-def += -DMAX_RES_720P
 endif
 ifeq ($(TARGET_BOARD_PLATFORM),msm7x30)
 libmm-venc-def += -DMAX_RES_720P
+endif
+ifneq ($(BOARD_USES_PMEM_ADSP),true)
+ifeq ($(TARGET_USES_ION),true)
+libmm-venc-def += -DUSE_ION
+endif
 endif
 libmm-venc-def += -D_ANDROID_ICS_
 # ---------------------------------------------------------------------------------

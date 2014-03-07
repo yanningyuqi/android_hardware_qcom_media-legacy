@@ -9,17 +9,15 @@ LOCAL_PATH:= $(ROOT_DIR)
 # 				Common definitons
 # ---------------------------------------------------------------------------------
 
-libOmxVdec-def := -D__alignx\(x\)=__attribute__\(\(__aligned__\(x\)\)\)
 libOmxVdec-def += -D__align=__alignx
 libOmxVdec-def += -Dinline=__inline
-libOmxVdec-def += -g -O3
 libOmxVdec-def += -DIMAGE_APPS_PROC
 libOmxVdec-def += -D_ANDROID_
 libOmxVdec-def += -DCDECL
 libOmxVdec-def += -DT_ARM
 libOmxVdec-def += -DNO_ARM_CLZ
 libOmxVdec-def += -UENABLE_DEBUG_LOW
-#libOmxVdec-def += -DENABLE_DEBUG_HIGH
+libOmxVdec-def += -DENABLE_DEBUG_HIGH
 libOmxVdec-def += -DENABLE_DEBUG_ERROR
 libOmxVdec-def += -UINPUT_BUFFER_LOG
 libOmxVdec-def += -UOUTPUT_BUFFER_LOG
